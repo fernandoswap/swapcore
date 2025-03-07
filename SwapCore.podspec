@@ -164,7 +164,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SwapCore"
-  s.version      = "1.0.4"
+  s.version      = "1.0.5"
   s.summary      = "A nice logger tool in Swift."
   s.description  = <<-DESC
   A nice logger tool in Swift. Cheers
