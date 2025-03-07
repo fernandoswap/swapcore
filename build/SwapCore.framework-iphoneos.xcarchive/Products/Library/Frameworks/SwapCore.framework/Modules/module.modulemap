@@ -1,0 +1,6 @@
+framework module SwapCore {
+  umbrella header "SwapCore.h"
+  export *
+
+  module * { export * }
+}

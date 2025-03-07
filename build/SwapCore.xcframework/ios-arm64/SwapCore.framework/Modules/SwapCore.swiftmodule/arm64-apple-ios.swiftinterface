@@ -1,0 +1,68 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target arm64-apple-ios15.6 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name SwapCore
+import Foundation
+@_exported import SwapCore
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public enum LoggerLevel : Swift.Int {
+  case info
+  case debug
+  case warning
+  case error
+  case none
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum LoggerOutput : Swift.String {
+  case debuggerConsole
+  case deviceConsole
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class NiceLogger : ObjectiveC.NSObject {
+  public static var tag: Swift.String?
+  public static var level: SwapCore.LoggerLevel
+  public static var ouput: SwapCore.LoggerOutput
+  public static var showThread: Swift.Bool
+  public class func i(_ message: Swift.String, currentTime: Foundation.Date = Date(), fileName: Swift.String = #file, functionName: Swift.String = #function, lineNumber: Swift.Int = #line, thread: Foundation.Thread = Thread.current)
+  public class func d(_ message: Swift.String, currentTime: Foundation.Date = Date(), fileName: Swift.String = #file, functionName: Swift.String = #function, lineNumber: Swift.Int = #line, thread: Foundation.Thread = Thread.current)
+  public class func w(_ message: Swift.String, currentTime: Foundation.Date = Date(), fileName: Swift.String = #file, functionName: Swift.String = #function, lineNumber: Swift.Int = #line, thread: Foundation.Thread = Thread.current)
+  public class func e(_ message: Swift.String, currentTime: Foundation.Date = Date(), fileName: Swift.String = #file, functionName: Swift.String = #function, lineNumber: Swift.Int = #line, thread: Foundation.Thread = Thread.current)
+  @objc deinit
+}
+extension Foundation.Date {
+  public var millisecondsSince1970: Swift.Int {
+    get
+  }
+  public var secondsSince1970: Swift.Int {
+    get
+  }
+  public init(milliseconds: Swift.Int)
+  public func getCurrentTimeString(_ format: Swift.String = "yyyy-MM-dd HH:mm:ss") -> Swift.String
+  public var iso8601: Swift.String {
+    get
+  }
+}
+extension Foundation.Formatter {
+  public static let iso8601: Foundation.DateFormatter
+}
+extension Swift.String {
+  public var dateFromISO8601: Foundation.Date? {
+    get
+  }
+}
+extension SwapCore.LoggerLevel : Swift.Equatable {}
+extension SwapCore.LoggerLevel : Swift.Hashable {}
+extension SwapCore.LoggerLevel : Swift.RawRepresentable {}
+extension SwapCore.LoggerOutput : Swift.Equatable {}
+extension SwapCore.LoggerOutput : Swift.Hashable {}
+extension SwapCore.LoggerOutput : Swift.RawRepresentable {}
