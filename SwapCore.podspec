@@ -164,7 +164,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SwapCore"
-  s.version      = "1.0.0"
+  s.version      = "1.0.3"
   s.summary      = "A nice logger tool in Swift."
   s.description  = <<-DESC
   A nice logger tool in Swift. Cheers
@@ -175,7 +175,7 @@ Pod::Spec.new do |s|
   s.author             = { "Fernando Cruz" => "fernando.cruz@contaswap.com" }
   s.ios.deployment_target = "15.6"
   s.ios.vendored_frameworks = "build/SwapCore.xcframework"
-  s.source            = { :git => 'https://github.com/fernandoswap/swapcore.git', :tag => "1.0.0" }
+  s.source            = { :git => 'https://github.com/fernandoswap/swapcore.git', :tag => "1.0.3" }
   s.exclude_files = "Classes/Exclude"
 
 end
